@@ -1,0 +1,31 @@
+.product {
+  display: grid;
+  border: 1px solid red;
+  width: 25rem;
+  justify-content: left;
+  padding: 1rem;
+}
+
+.product__image {
+  display: grid;
+  place-items: center;
+}
+.product__title {
+  border: 1px solid red;
+  font-weight: 500;
+}
+.product__rating {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+}
+.product__reviews {
+  color: blue;
+}
+.product__button {
+  padding: 10px;
+  background-color: #f3c85d;
+  outline-style: none;
+  border-radius: 3px;
+  border: none;
+  width: 10rem;
+}

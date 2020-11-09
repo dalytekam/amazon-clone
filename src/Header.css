@@ -1,0 +1,79 @@
+.header__logo {
+  object-fit: contain;
+  height: 60px;
+}
+.header {
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 1fr 11fr 3fr;
+  padding: 2px;
+}
+.header__search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.header__seacrhIcon {
+  background-color: #ff9201;
+  padding: 2px;
+}
+.header__input {
+  height: 22px;
+  padding: 1px;
+  width: 90%;
+  margin-left: 2rem;
+}
+.header__right {
+  display: flex;
+  color: #fff;
+  grid-gap: 1.2rem;
+}
+.header__right__1 {
+  display: grid;
+  align-items: end;
+  padding: 5px;
+}
+.header__right__2 {
+  display: grid;
+  align-items: end;
+  padding: 5px;
+}
+
+.header__right__3 {
+  display: grid;
+  align-items: end;
+  padding: 5px;
+}
+
+.header__right__4 {
+  display: grid;
+  align-items: end;
+  position: relative;
+  padding: 5px;
+}
+
+.header__right span {
+  margin: 0px;
+  padding: 0px;
+}
+.header__right__4 span {
+  position: absolute;
+  color: #ff9201;
+  padding: 3px;
+  top: 15px;
+  right: 2px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.header__right__1 {
+  cursor: pointer;
+}
+.header__right__2 {
+  cursor: pointer;
+}
+.header__right__3 {
+  cursor: pointer;
+}
+.header__right__4 {
+  cursor: pointer;
+}

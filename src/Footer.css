@@ -1,0 +1,29 @@
+.footer {
+  background-color: #232f3e;
+  display: grid;
+  /* position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;*/
+}
+.footer li {
+  list-style-type: none;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.footer__link {
+  margin: 0 28rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+}
+.footer li a:hover {
+  text-decoration: underline;
+}
+.footer strong {
+  font-size: 1rem;
+  color: #fff;
+}
