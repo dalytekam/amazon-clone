@@ -1,28 +1,34 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import items from "./product";
 const Home = () => {
   return (
     <div className="home">
       <div className="home__container">
         <img
           className="home__image"
-          src="https://res.cloudinary.com/dalytekam/image/upload/v1604894245/alexa-onsale.jpg"
+          src={
+            "https://res.cloudinary.com/dalytekam/image/upload/v1604894245/alexa-onsale.jpg"
+          }
           alt="home background"
         />
         <div className="products">
-          <Product
-            price={15}
-            title={
-              "Purina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy Feast Grilled Feast in Gravy Canned Wet Cat Food"
-            }
-            image={
-              "https://res.cloudinary.com/dalytekam/image/upload/v1604897184/8120Lb01SxL._AC_UL320_.jpg"
-            }
-            reviews={11136}
-            addedToCart={false}
-            rating={4}
-          />
+          {items.map(item => (
+            <Product
+              price={item.price}
+              title={item.title}
+              image={item.image}
+              reviews={item.reviews}
+              addedToCart={item.addedToCart}
+              rating={item.rating}
+              delayText={item.delayText}
+              delayDate={item.delayDate}
+              promo={item.promo}
+              primeText={item.primeText}
+              prime={item.prime}
+            />
+          ))}
         </div>
         <div className="products"></div>
         <div className="products"></div>

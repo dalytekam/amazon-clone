@@ -10,7 +10,12 @@ const Product = ({
   rating,
   reviews,
   addedToCart,
-  delay
+  delayText,
+  delayDate,
+  prime,
+
+  primeText,
+  promo
 }) => {
   return (
     <div className="product">
@@ -30,11 +35,16 @@ const Product = ({
           {numeral(reviews).format("0,0")}
         </span>
       </div>
-      <p>
-        <sup className="product__money">$</sup>
-        {price}
+      <p className="product__money">
+        <sup className="product__symbol">$</sup>
+        {numeral(price).format("0.00")}
       </p>
-      <p>{delay}</p>
+      <p className="product__promoText">
+        {delayText} <strong>{delayDate}</strong>
+      </p>
+      <div>
+        <p>{prime ? <CheckOutlinedIcon /> : promo}</p>
+      </div>
       <div>
         <span className="product__toCart">
           <CheckCircleOutlinedIcon />
