@@ -1,7 +1,8 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
-import items from "./product";
+import items from "./products";
+
 const Home = () => {
   return (
     <div className="home">

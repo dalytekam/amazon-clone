@@ -1,0 +1,49 @@
+.subtotal__check {
+  margin-bottom: -0.3rem;
+}
+.subtotal {
+  background-color: #f0f2f2;
+  margin: 1rem;
+  padding: 1.2rem;
+  padding-top: 0.1rem;
+}
+button {
+  padding: 10px;
+  background-color: "";
+  background-image: linear-gradient(
+    to bottom,
+    #f5d994,
+    #f4d484,
+    #f3ce73,
+    #f2c962,
+    #f1c350
+  );
+  outline-style: none;
+  border-radius: 3px;
+  border: 1px solid #adadad;
+  width: 100%;
+  transition: all 200ms ease;
+}
+button:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #f1c350,
+    #f1c350,
+    #f1c350,
+    #f1c350,
+    #f1c350
+  );
+}
+.subtotal__price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: -1rem;
+}
+.subtotal__title {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.subtotal__gift {
+  font-weight: 400;
+  margin-top: -0.5rem;
+}

@@ -42,8 +42,18 @@ const Product = ({
       <p className="product__promoText">
         {delayText} <strong>{delayDate}</strong>
       </p>
-      <div>
-        <p>{prime ? <CheckOutlinedIcon /> : promo}</p>
+      <div className="product__prime">
+        <p>
+          {prime ? (
+            <>
+              <CheckOutlinedIcon className="product__icon" />
+              <span className="product__primeText">{primeText} </span>
+              {promo}
+            </>
+          ) : (
+            promo
+          )}
+        </p>
       </div>
       <div>
         <span className="product__toCart">

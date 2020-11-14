@@ -6,6 +6,7 @@ import { Route, Switch } from "react-router-dom";
 import Subheader from "./Subheader";
 import Footer from "./Footer";
 import Banner from "./Home";
+
 const App = () => {
   return (
     <div className="app">

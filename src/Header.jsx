@@ -30,12 +30,15 @@ const Header = () => {
           <span></span>
           <strong>Try Prime</strong>
         </div>
-        <Link to="/checkout">
-          <div className="header__right__4">
-            <span>12</span>
-            <ShoppingCartOutlinedIcon />
-          </div>
-        </Link>
+
+        <div className="header__right__4">
+          <span>12</span>
+          <Link to="/checkout">
+            <ShoppingCartOutlinedIcon
+              style={{ color: "white", "margin-bottom": "-0.4rem" }}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );
