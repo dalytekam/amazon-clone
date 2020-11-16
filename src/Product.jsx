@@ -3,6 +3,8 @@ import "./Product.css";
 import CheckCircleOutlinedIcon from "@material-ui/icons/CheckCircleOutlined";
 import CheckOutlinedIcon from "@material-ui/icons/CheckOutlined";
 import numeral from "numeral";
+import { connect } from "react-redux";
+import * as actions from "./actions";
 const Product = ({
   image,
   title,
@@ -13,9 +15,9 @@ const Product = ({
   delayText,
   delayDate,
   prime,
-
   primeText,
-  promo
+  promo,
+  addToCart
 }) => {
   return (
     <div className="product">
@@ -27,8 +29,10 @@ const Product = ({
         <span>
           {Array(rating)
             .fill(0)
-            .map(elt => (
-              <span className="product__rating__emoji">⭐</span>
+            .map((elt, i) => (
+              <span key={i} className="product__rating__emoji">
+                ⭐
+              </span>
             ))}
         </span>
         <span className="product__reviews">
@@ -37,7 +41,7 @@ const Product = ({
       </div>
       <p className="product__money">
         <sup className="product__symbol">$</sup>
-        {numeral(price).format("0.00")}
+        {numeral(price).format("0,0.00")}
       </p>
       <p className="product__promoText">
         {delayText} <strong>{delayDate}</strong>
@@ -60,10 +64,27 @@ const Product = ({
           <CheckCircleOutlinedIcon />
           {addedToCart}
         </span>
-        <button className="product__button">Add to Cart</button>
+        <button
+          className="product__button"
+          onClick={() => {
+            addToCart();
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
 };
-
-export default Product;
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id, image, title, price } = ownProps;
+  return {
+    addToCart: () => {
+      dispatch({
+        type: actions.ADD_TO_CART,
+        payload: { id, image, title, price }
+      });
+    }
+  };
+};
+export default connect(null, mapDispatchToProps)(Product);

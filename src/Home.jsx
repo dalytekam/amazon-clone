@@ -1,9 +1,10 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
-import items from "./products";
 
-const Home = () => {
+import { connect } from "react-redux";
+
+const Home = ({ products }) => {
   return (
     <div className="home">
       <div className="home__container">
@@ -15,8 +16,10 @@ const Home = () => {
           alt="home background"
         />
         <div className="products">
-          {items.map(item => (
+          {products.map(item => (
             <Product
+              id={item.id}
+              key={item.id}
               price={item.price}
               title={item.title}
               image={item.image}
@@ -38,5 +41,9 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
+const mapStateToProps = state => {
+  return {
+    products: state.productsToSale
+  };
+};
+export default connect(mapStateToProps)(Home);

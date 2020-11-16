@@ -1,5 +1,6 @@
 const items = [
   {
+    id: 1,
     price: 269,
     title:
       "Purina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy ",
@@ -17,6 +18,7 @@ const items = [
     prime: true
   },
   {
+    id: 2,
     price: 3514,
     title:
       "Purina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy ",
@@ -34,7 +36,8 @@ const items = [
     prime: false
   },
   {
-    price: 3514,
+    id: 3,
+    price: 18.79,
     title:
       "UBeesize 67'' Phone Tripod Stand & Selfie Stick Tripod, All in One Professional Cell Phone Tripod ",
 
@@ -51,6 +54,7 @@ const items = [
     prime: true
   },
   {
+    id: 4,
     price: 77.99,
     title:
       "Bluetooth Earpiece, Vogek Bluetooth Headset aptX HD 16 Hours Talktime with CVC8.0 Noise Cancelling Mic Mute Key Hands-Free ",
@@ -68,7 +72,8 @@ const items = [
     prime: true
   },
   {
-    price: 3514,
+    id: 5,
+    price: 165.99,
     title:
       "HP Stream 14inch HD(1366x768) Display, Intel Celeron N4000 Dual-Core Processor, 4GB RAM, 32GB eMMC",
 

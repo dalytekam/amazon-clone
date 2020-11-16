@@ -3,7 +3,8 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
-const Header = () => {
+import { connect } from "react-redux";
+const Header = ({ quantity }) => {
   return (
     <div className="header">
       <Link to="/">
@@ -30,18 +31,21 @@ const Header = () => {
           <span></span>
           <strong>Try Prime</strong>
         </div>
+        <Link to="/checkout">
+          <div className="header__right__4">
+            <span>{quantity}</span>
 
-        <div className="header__right__4">
-          <span>12</span>
-          <Link to="/checkout">
             <ShoppingCartOutlinedIcon
-              style={{ color: "white", "margin-bottom": "-0.4rem" }}
+              style={{ color: "white", marginBottom: "-3.5rem" }}
             />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default Header;
+const mapStateToProps = state => {
+  return { quantity: state.itemQuantity };
+};
+export default connect(mapStateToProps)(Header);
