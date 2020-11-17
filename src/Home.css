@@ -11,5 +11,7 @@
   margin: 0 10rem;
 }
 .products {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-gap: 1rem;
 }
