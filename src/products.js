@@ -9,7 +9,7 @@ const items = [
       "https://res.cloudinary.com/dalytekam/image/upload/v1604897184/8120Lb01SxL._AC_UL320_.jpg",
 
     reviews: 11136,
-    addedToCart: false,
+
     rating: 4,
     delayText: "Get it as soon as",
     delayDate: "Tue, Nov 10",
@@ -17,24 +17,7 @@ const items = [
     primeText: "Prime",
     prime: true
   },
-  {
-    id: 2,
-    price: 3514,
-    title:
-      "Purina Fancy Feast Grilled Feast in Gravy Canned Wet Cat FoodPurina Fancy ",
 
-    image:
-      "https://res.cloudinary.com/dalytekam/image/upload/v1604897184/8120Lb01SxL._AC_UL320_.jpg",
-
-    reviews: 11136,
-    addedToCart: false,
-    rating: 5,
-    delayText: "Get it as soon as",
-    delayDate: "Mon, Oct 25",
-    promo: "FREE Shipping on your first order shipped by Amazon",
-    primeText: "Prime",
-    prime: false
-  },
   {
     id: 3,
     price: 18.79,
@@ -45,7 +28,7 @@ const items = [
       "https://res.cloudinary.com/dalytekam/image/upload/v1605041760/41N1CV2UoZL._AC_.jpg",
 
     reviews: 732,
-    addedToCart: false,
+
     rating: 3,
     delayText: "Get it as soon as",
     delayDate: "Wen, Jan 7",
@@ -63,7 +46,7 @@ const items = [
       "https://res.cloudinary.com/dalytekam/image/upload/v1605041760/715hSfwQW6L._AC_SX679_.jpg",
 
     reviews: 145,
-    addedToCart: false,
+
     rating: 4,
     delayText: "Get it as soon as",
     delayDate: "Fri, Jan 13",
@@ -81,7 +64,7 @@ const items = [
       "https://res.cloudinary.com/dalytekam/image/upload/v1605041762/81RCOr3hJOL._AC_SL1500_.jpg",
 
     reviews: 187,
-    addedToCart: false,
+
     rating: 5,
     delayText: "Get it as soon as",
     delayDate: "Mon, Oct 25",

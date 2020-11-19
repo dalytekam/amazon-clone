@@ -1,6 +1,6 @@
 import React from "react";
 import "./Product.css";
-import CheckCircleOutlinedIcon from "@material-ui/icons/CheckCircleOutlined";
+
 import CheckOutlinedIcon from "@material-ui/icons/CheckOutlined";
 import numeral from "numeral";
 import { connect } from "react-redux";
@@ -11,7 +11,7 @@ const Product = ({
   price,
   rating,
   reviews,
-  addedToCart,
+
   delayText,
   delayDate,
   prime,
@@ -60,10 +60,6 @@ const Product = ({
         </p>
       </div>
       <div>
-        <span className="product__toCart">
-          <CheckCircleOutlinedIcon />
-          {addedToCart}
-        </span>
         <button
           className="product__button"
           onClick={() => {
@@ -76,13 +72,15 @@ const Product = ({
     </div>
   );
 };
+
+let pid = 0;
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const { id, image, title, price } = ownProps;
+  const { image, title, price } = ownProps;
   return {
     addToCart: () => {
       dispatch({
         type: actions.ADD_TO_CART,
-        payload: { id, image, title, price }
+        payload: { prid: ++pid, image, title, price }
       });
     }
   };

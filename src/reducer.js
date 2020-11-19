@@ -15,7 +15,17 @@ const reducer = (state = initialStore, action) => {
       total: (state.total += action.payload.price)
     };
   }
-
+  if (action.type === actions.REMOVE_FROM_CART) {
+    const cartAfterRemove = state.cart.filter(
+      item => item.prid !== action.payload.prid
+    );
+    return {
+      ...state,
+      itemQuantity: state.itemQuantity - 1,
+      cart: cartAfterRemove,
+      total: (state.total -= action.payload.price)
+    };
+  }
   return state;
 };
 
