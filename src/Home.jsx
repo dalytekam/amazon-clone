@@ -34,9 +34,6 @@ const Home = ({ products }) => {
             />
           ))}
         </div>
-        <div className="products"></div>
-        <div className="products"></div>
-        <div className="products"></div>
       </div>
     </div>
   );

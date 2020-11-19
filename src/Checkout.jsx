@@ -3,8 +3,9 @@ import CartItem from "./CartItem";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import { connect } from "react-redux";
+import SimilarProduct from "./SimilarProduct";
 
-const Checkout = ({ cart, total, quantity }) => {
+const Checkout = ({ cart, total, quantity, productsOnSale }) => {
   return (
     <div className="checkout">
       <div className="checkout__list">
@@ -28,7 +29,12 @@ const Checkout = ({ cart, total, quantity }) => {
           <section className="checkout__list__items__subtotal">
             <p>
               {`Subtotal ${quantity} (${quantity > 1 ? "items" : "item"})`}:
-              <span> {total}</span>
+              <span>
+                {new Intl.NumberFormat("en-EN", {
+                  style: "currency",
+                  currency: "USD"
+                }).format(total)}
+              </span>
             </p>
           </section>
         </section>
@@ -37,12 +43,29 @@ const Checkout = ({ cart, total, quantity }) => {
         <div className="checkout__subtotal__amount">
           <Subtotal />
         </div>
-        <div className="checkout__subtotal__ads">list ads</div>
+        <div className="checkout__subtotal__ads">
+          <h4>Products you recently viewed</h4>
+          {productsOnSale.map(item => (
+            <SimilarProduct
+              image={item.image}
+              title={item.title}
+              price={item.price}
+              rating={item.rating}
+              reviews={item.reviews}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 const mapStateToProps = store => {
-  return { cart: store.cart, total: store.total, quantity: store.itemQuantity };
+  console.log(store.productsToSale);
+  return {
+    cart: store.cart,
+    total: store.total,
+    quantity: store.itemQuantity,
+    productsOnSale: store.productsToSale
+  };
 };
 export default connect(mapStateToProps)(Checkout);

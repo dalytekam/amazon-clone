@@ -21,8 +21,8 @@
 }
 .product__rating {
   display: grid;
-
-  grid-template-columns: 1fr 1fr auto;
+  grid-gap: 1rem;
+  grid-template-columns: auto 1fr 1fr auto;
 }
 .product__reviews {
   color: blue;

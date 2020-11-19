@@ -5,7 +5,10 @@
   grid-gap: 0.2rem;
   background-color: #eaeded;
 }
-
+.checkout__subtotal {
+  display: grid;
+  grid-gap: 0.5rem;
+}
 .checkout__list__image {
   width: 98%;
   height: 9rem;
@@ -36,6 +39,12 @@
   padding: 1rem;
   margin-bottom: 1.5rem;
 }
+
+.checkout__list__items__empty {
+  justify-self: center;
+  font-weight: bold;
+  color: #b0b4b4;
+}
 .checkout__list__items__subtotal p {
   font-size: 1.5rem;
 }
@@ -46,4 +55,17 @@
   display: grid;
   justify-content: end;
   padding-right: 1.5rem;
+}
+.checkout__subtotal__ads {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 0.5rem;
+  margin-top: -0.2rem;
+  display: grid;
+  text-align: center;
+}
+.checkout__subtotal__ads h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  align-self: center;
 }

@@ -8,7 +8,12 @@ const Subtotal = ({ quantity, total }) => {
       <p className="subtotal__title">{`Subtotal ${quantity} (${
         quantity > 1 ? "items" : "item"
       })`}</p>
-      <p className="subtotal__price">{total}</p>
+      <p className="subtotal__price">
+        {new Intl.NumberFormat("en-EN", {
+          style: "currency",
+          currency: "USD"
+        }).format(total)}
+      </p>
       <p className="subtotal__gift">
         <input type="checkbox" className="subtotal__check" /> This order
         contains a gift

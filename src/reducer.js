@@ -12,7 +12,7 @@ const reducer = (state = initialStore, action) => {
       ...state,
       itemQuantity: state.itemQuantity + 1,
       cart: [...state.cart, action.payload],
-      total: (state.total += action.payload.price)
+      total: parseFloat((state.total += action.payload.price).toFixed(2))
     };
   }
   if (action.type === actions.REMOVE_FROM_CART) {
@@ -23,7 +23,7 @@ const reducer = (state = initialStore, action) => {
       ...state,
       itemQuantity: state.itemQuantity - 1,
       cart: cartAfterRemove,
-      total: (state.total -= action.payload.price)
+      total: parseFloat((state.total -= action.payload.price).toFixed(2))
     };
   }
   return state;
