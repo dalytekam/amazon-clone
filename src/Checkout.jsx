@@ -47,6 +47,7 @@ const Checkout = ({ cart, total, quantity, productsOnSale }) => {
           <h4>Products you recently viewed</h4>
           {productsOnSale.map(item => (
             <SimilarProduct
+              key={item.id}
               image={item.image}
               title={item.title}
               price={item.price}

@@ -10,7 +10,7 @@ const SimilarProduct = ({ image, title, price, rating, reviews }) => {
   return (
     <section className="similar">
       <div className="similar__left">
-        <img src={image} alt="simailar product picture" />
+        <img src={image} alt="article visual" />
       </div>
       <div className="similar__right">
         <h3>{truncateString(title, 20)}</h3>

@@ -1,0 +1,77 @@
+.login {
+  display: grid;
+  background-color: #fff;
+  place-items: center;
+  height: 55vh;
+}
+
+.login__logo {
+  margin: 1.6rem 0rem;
+  object-fit: contain;
+  width: 6rem;
+}
+.login__input__container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 22rem;
+  display: grid;
+}
+form input {
+  height: 1.5rem;
+  width: 18rem;
+  margin: 0 2rem;
+  border-radius: 3px;
+  border-width: 1px;
+}
+form p {
+  margin: 0 2rem;
+}
+.login__terms {
+  font-size: small;
+  margin: 0.2rem 2rem 0.3rem 2rem;
+}
+form input:focus {
+  box-shadow: 0px 0px 5px rgba(231, 118, 0);
+}
+.login__signinButton {
+  height: 2rem;
+  width: 18.5rem;
+  margin: 1rem 2rem 1rem 2rem;
+}
+.login__signupButton {
+  height: 2rem;
+  width: 22rem;
+  background-image: linear-gradient(
+    to bottom,
+    #f4f5f7,
+    #f3f4f6,
+    #f2f3f6,
+    #f1f2f5,
+    #f0f1f4
+  );
+  line-height: 0.9rem;
+}
+.login__signupButton:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #f0f1f4,
+    #f0f1f4,
+    #f0f1f4,
+    #f0f1f4,
+    #f0f1f4
+  );
+}
+.login__signup {
+  display: grid;
+  place-items: center;
+}
+.login__signup h5 {
+  color: rgb(153, 153, 153);
+  font-weight: 350;
+}
+.login__input__container h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  align-self: start;
+  margin-left: 2rem;
+}

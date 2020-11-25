@@ -11,6 +11,8 @@ import reducer from "./reducer";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
+import Login from "./Login";
+
 const store = createStore(
   reducer,
   composeWithDevTools(applyMiddleware(logger))
@@ -20,13 +22,23 @@ const App = () => {
   return (
     <div className="app">
       <Provider store={store}>
-        <Header />
-        <Subheader />
         <Switch>
-          <Route path="/checkout" component={Checkout} />
-          <Route path="/" component={Home} />
+          <Route path="/checkout">
+            <Header />
+            <Subheader />
+            <Checkout />
+            <Footer />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Header />
+            <Subheader />
+            <Home />
+            <Footer />
+          </Route>
         </Switch>
-        <Footer />
       </Provider>
     </div>
   );

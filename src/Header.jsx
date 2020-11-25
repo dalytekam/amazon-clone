@@ -4,7 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-const Header = ({ quantity }) => {
+const Header = ({ quantity, userEmail }) => {
   return (
     <div className="header">
       <Link to="/">
@@ -19,10 +19,12 @@ const Header = ({ quantity }) => {
         <SearchIcon className="header__seacrhIcon" />
       </div>
       <div className="header__right">
-        <div className="header__right__1">
-          <span>Hello, Sign in</span>
-          <strong>Account & List</strong>
-        </div>
+        <Link to="/login">
+          <div className="header__right__1">
+            <span>Hello, {userEmail}</span>
+            <strong>Account & List</strong>
+          </div>
+        </Link>
         <div className="header__right__2">
           <span>Returns</span>
           <strong>& Orders</strong>
@@ -46,6 +48,6 @@ const Header = ({ quantity }) => {
 };
 
 const mapStateToProps = state => {
-  return { quantity: state.itemQuantity };
+  return { quantity: state.itemQuantity, userEmail: state.credentials.email };
 };
 export default connect(mapStateToProps)(Header);
